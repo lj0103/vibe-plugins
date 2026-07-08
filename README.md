@@ -17,6 +17,10 @@ scripts/        仓库级构建、检查和发布脚本
 3. 将插件依赖、测试和配置保留在插件目录内。
 4. 不要提交密钥；需要配置时提供 `.env.example`。
 
+## 已收录插件
+
+- [订单消息助手](./plugins/order-message-assistant/README.md)：在快递助手 ERP 与抖店飞鸽之间处理蓝旗订单消息，并在成功后修改备注旗子状态。
+
 ## 插件约定
 
 - 目录名使用小写英文和连字符，例如 `text-cleaner`。
@@ -31,4 +35,3 @@ scripts/        仓库级构建、检查和发布脚本
 ```text
 plugin-name-v1.0.0
 ```
-
