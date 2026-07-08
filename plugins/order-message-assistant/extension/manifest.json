@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "订单消息助手·飞鸽真实输入",
+  "version": "1.3.0",
+  "description": "接收订单消息助手当前文案，在飞鸽客服工作台产生真实键盘输入和鼠标发送。",
+  "permissions": ["debugger"],
+  "host_permissions": ["https://im.jinritemai.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://im.jinritemai.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
