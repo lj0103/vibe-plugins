@@ -20,7 +20,6 @@ scripts/              仓库级构建、检查和发布脚本
 
 ## 已收录插件
 
-- [订单消息助手](./plugins/order-message-assistant/README.md)：在快递助手 ERP 与抖店飞鸽之间处理蓝旗订单消息，并在成功后修改备注旗子状态。
 - [Codex 用量气泡工具](./codex-usage-monitor/README.md)：在 macOS 屏幕右下角实时显示本机 Codex 剩余用量，颜色会随剩余比例从绿色渐变到红色。
 
 ## 插件约定
