@@ -1,13 +1,14 @@
 # Vibe Plugins
 
-用于统一维护多个独立插件脚本的轻量 monorepo。
+用于统一维护多个独立插件脚本与本地开发工具的轻量 monorepo。
 
 ## 目录结构
 
 ```text
-plugins/        每个插件一个独立目录
-shared/         多个插件共享的代码或资源
-scripts/        仓库级构建、检查和发布脚本
+plugins/              每个插件一个独立目录
+codex-usage-monitor/  macOS Codex 剩余用量实时气泡工具
+shared/               多个插件共享的代码或资源
+scripts/              仓库级构建、检查和发布脚本
 ```
 
 ## 新增插件
@@ -20,6 +21,7 @@ scripts/        仓库级构建、检查和发布脚本
 ## 已收录插件
 
 - [订单消息助手](./plugins/order-message-assistant/README.md)：在快递助手 ERP 与抖店飞鸽之间处理蓝旗订单消息，并在成功后修改备注旗子状态。
+- [Codex 用量气泡工具](./codex-usage-monitor/README.md)：在 macOS 屏幕右下角实时显示本机 Codex 剩余用量，颜色会随剩余比例从绿色渐变到红色。
 
 ## 插件约定
 
