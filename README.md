@@ -18,9 +18,11 @@ scripts/              仓库级构建、检查和发布脚本
 3. 将插件依赖、测试和配置保留在插件目录内。
 4. 不要提交密钥；需要配置时提供 `.env.example`。
 
-## 已收录插件
+## 已收录插件与工具
 
+- [订单消息助手](./plugins/order-message-assistant/README.md)：在快递助手 ERP 与抖店飞鸽之间处理蓝旗订单消息，并在成功后修改备注旗子状态。
 - [Codex 用量气泡工具](./codex-usage-monitor/README.md)：在 macOS 屏幕右下角实时显示本机 Codex 剩余用量，颜色会随剩余比例从绿色渐变到红色。
+- [扣子公开视频解析服务](./plugins/coze-video-parser/README.md)：使用自托管 `yt-dlp` 接口解析用户有权处理的公开视频链接，并提供可导入扣子的 OpenAPI 配置。
 
 ## 插件约定
 

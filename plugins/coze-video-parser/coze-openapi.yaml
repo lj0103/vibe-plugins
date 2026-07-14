@@ -1,0 +1,82 @@
+openapi: 3.0.3
+info:
+  title: 公共视频信息解析
+  version: 1.0.0
+  description: >-
+    解析用户有权处理的公开视频链接，返回标题、封面和可用媒体地址。
+    不绕过登录、付费、DRM 或其他访问控制。
+servers:
+  - url: https://YOUR-DOMAIN.example.com
+paths:
+  /api/video/parse:
+    post:
+      operationId: parseVideoLink
+      summary: 解析公开视频链接
+      description: 输入公开视频分享链接，返回视频标题、封面和临时媒体地址。
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - url
+              properties:
+                url:
+                  type: string
+                  format: uri
+                  description: 用户有权处理的公开视频分享链接
+      responses:
+        "200":
+          description: 解析成功
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VideoInfo"
+        "400":
+          description: 不支持的域名
+        "401":
+          description: 服务访问口令无效
+        "422":
+          description: 视频链接无法解析
+        "504":
+          description: 视频平台响应超时
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+  schemas:
+    VideoInfo:
+      type: object
+      required:
+        - title
+        - video_url
+        - webpage_url
+        - note
+      properties:
+        title:
+          type: string
+        cover_url:
+          type: string
+          nullable: true
+        video_url:
+          type: string
+          format: uri
+        webpage_url:
+          type: string
+          format: uri
+        platform:
+          type: string
+          nullable: true
+        uploader:
+          type: string
+          nullable: true
+        duration:
+          type: number
+          nullable: true
+        note:
+          type: string
