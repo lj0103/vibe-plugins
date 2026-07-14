@@ -20,6 +20,7 @@ scripts/        仓库级构建、检查和发布脚本
 ## 已收录插件
 
 - [订单消息助手](./plugins/order-message-assistant/README.md)：在快递助手 ERP 与抖店飞鸽之间处理蓝旗订单消息，并在成功后修改备注旗子状态。
+- [扣子公开视频解析服务](./plugins/coze-video-parser/README.md)：使用自托管 `yt-dlp` 接口解析用户有权处理的公开视频链接，并提供可导入扣子的 OpenAPI 配置。
 
 ## 插件约定
 
